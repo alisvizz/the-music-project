@@ -1,0 +1,416 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333;
+}
+
+.section {
+    padding: 5rem 2rem;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navegación superior */
+.nav-bar {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.nav-button { /* Botón de contacto*/
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    color: #000;
+    text-decoration: none;
+    font-family: Impact, sans-serif;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+
+}
+/* Botón de Log In en la página principal */
+.login-toggle {
+    font-family: Impact, sans-serif;
+    font-size: 1.2rem;
+    color: #000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-left: 1rem;
+}
+
+/* Título principal en la página de inicio */
+.title {
+    font-family: Impact, sans-serif;
+    font-size: 5.5rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Títulos de cada sección en rojo */
+.section-title {
+    font-family: Impact, sans-serif;
+    font-size: 3rem;
+    color: #ff0000;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+/* Descripción en la sección "Qué Hacemos" */
+.section-description {
+    font-size: 1.2rem;
+    color: #000000;
+    max-width: 800px;
+    margin-top: 1rem;
+}
+
+/* Cuadrícula para "Quiénes Somos" */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 2rem;
+}
+
+.grid-item {
+    background-color: #ddd;
+    height: 200px;
+    border-radius: 8px;
+}
+
+/* Opciones de instrumentos en "Elige Instrumento" */
+.instrument-options {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.instrument {
+    background-color: #ddd;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-family: Impact, sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+
+/* Estilo de la sección "Elige Modalidad" */
+.elige-modalidad {
+    padding: 4rem 2rem;
+}
+
+.modalidad-options {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.modalidad {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.modalidad h3 {
+    font-family: Impact, sans-serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.modalidad ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.modalidad ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo para la sección "Ponte en Contacto" */
+.ponte-en-contacto {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+/* Estilo para la sección de Log In */
+.log-in {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 2rem;
+    text-align: center;
+    z-index: 1000;
+    overflow-y: auto; /* Permite desplazamiento si el contenido es más alto que la pantalla */
+}
+
+/* Estilos para el título de Log In */
+.log-in .section-title {
+    font-family: Impact, sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para el formulario en la sección de Log In */
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+.login-form label { /* Estilo texto Usuario y contraseña*/
+    display: block;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-family: Impact, sans-serif;
+    letter-spacing: 0.05rem;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Estilos para los botones de Iniciar Sesión y Regístrate */
+.login-submit, .registro-toggle {
+    padding: 0.6rem; /* Tamaño del botón */
+    font-size: 1rem;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-top: 1rem;
+    font-family: Impact, sans-serif;
+    letter-spacing: 0.08rem;
+}
+
+.login-submit:hover, .registro-toggle:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+}
+
+/* Estilo para la sección de Registro */
+.registro {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.registro-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.registro-form label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    align-self: flex-start;
+    font-family: Impact, sans-serif;
+    letter-spacing: 0.05rem;
+}
+
+.registro-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.registro-submit {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+/* Estilo para el título en otras secciones */
+.section-title {
+    font-family: Impact, sans-serif;
+    font-size: 2rem;
+    color: #333;
+}
+
+
+.red-title {
+    color: #ff0000; /* Color rojo */
+}
+
+/* Estilo para el botón "Página Principal" */
+.pagina-principal {
+    width: auto; /* Tamaño automático */
+    padding: 0.5rem 1rem; /* Tamaño del botón */
+    font-size: 1.4rem; /* Tamaño de texto */
+    color: red; /* Color del texto en rojo */
+    background-color: white; /* Fondo blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-top: 1rem; /* Espacio entre botones */
+    font-family:Impact, sans-serif; /* Tipografía Impact */
+    letter-spacing: 0.1rem;
+}
+
+.pagina-principal:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+}
+
+
+/*Página mis partituras*/
+.perfil-container {
+    display: flex;
+    justify-content: space-between; /* Alinea los botones a los lados */
+    width: 100%;
+    position: relative; /* Para poder posicionar el botón "Mis Clases" */
+}
+.mi-perfil:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mi-perfil, .mis-clases {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-family: Impact, sans-serif;
+    font-size: 1.2rem;
+    color: #000;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+.mis-clases {
+    position: absolute;
+    right: 0;
+}
+
+.mis-clases:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilo para el título "Mis Partituras" */
+.title {
+    font-family: Impact, sans-serif;
+    font-size: 4rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.partituras-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.partitura {
+    width: 350px; /
+    height: auto; /* Mantiene la relación de aspecto */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal img {
+    max-width: 98%; /* Ancho máximo de la imagen en el modal */
+    max-height: 98%; /* Alto máximo de la imagen en el modal */
+    transform: scale(1,1);
+}
+
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.inicio {
+    background-image: url('../images/fondo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left; /* Alinea la imagen a la izquierda */
+    min-height: 85vh; /* Asegúrate de que la sección tenga al menos la altura de la ventana */
+}

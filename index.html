@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Music Project</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Página principal -->
+<section class="section inicio" id="inicio" >
+    <div class="nav-bar">
+        <a href="#contacto" class="nav-button">Contact</a>
+        <button class="login-toggle" onclick="toggleLogin()">Log In</button>
+    </div>
+    <h1 class="title">The Music Project</h1>
+    <p class="subtitle">Clases de música a tu medida</p>
+</section>
+
+<!-- Segunda página: Quiénes Somos -->
+<section class="section quienes-somos" id="quienes-somos">
+    <h2 class="section-title red-title">Quiénes Somos</h2>
+    <div class="grid">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+</section>
+
+<!-- Tercera página: Qué Hacemos -->
+<section class="section que-hacemos" id="que-hacemos">
+    <h2 class="section-title red-title">Qué Hacemos</h2>
+    <p class="section-description">¿Alguna vez has querido tocar un instrumento? Te traemos la forma más fácil y cómoda.</p>
+    <br>
+    <p class="section-description">Cursos especialmente diseñados para cada persona, tus canciones favoritas y todo el material necesario para progresar de cero a cien. Conviértete en un/una profesional.</p>
+</section>
+
+<!-- Cuarta página: Elige Instrumento -->
+<section class="section elige-instrumento" id="elige-instrumento">
+    <h2 class="section-title">Elige Instrumento</h2>
+    <div class="instrument-options">
+        <div class="instrument">Guitarra</div>
+        <div class="instrument">Ukelele</div>
+        <div class="instrument">Piano</div>
+    </div>
+</section>
+
+<!-- Quinta página: Elige Modalidad -->
+<section class="section elige-modalidad" id="elige-modalidad">
+    <h2 class="section-title">Elige Modalidad</h2>
+    <div class="modalidad-options">
+        <div class="modalidad presencial">
+            <h3>Presencial</h3>
+            <ul>
+                <li>-Tu profe se desplazará hasta tu casa</li>
+                <li>-Todas las partituras en la web</li>
+                <li>-Acceso total a recursos y tutoriales</li>
+                <li>-4 Clases (4h) al mes en persona</li>
+                <li>130€/mes (30€/clase, 10€ app)</li>
+            </ul>
+        </div>
+        <div class="modalidad online">
+            <h3>Online</h3>
+            <ul>
+                <li>-Desde casa y en cualquier momento</li>
+                <li>-Todas las partituras en la web</li>
+                <li>-Acceso total a recursos y tutoriales</li>
+                <li>-2 Clases (2h) al mes en directo online</li>
+                <li>50€/mes (20€/clase, 10€ app)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Sexta página: Ponte en Contacto -->
+<section class="section ponte-en-contacto" id="contacto">
+    <h2 class="section-title">Ponte en Contacto</h2>
+    <div class="contact-info">
+        <p>618300538</p>
+        <p>themusicproject@gmail.com</p>
+    </div>
+</section>
+
+<!-- Sección de Log In (inicialmente oculta y centrada en la pantalla) -->
+<section class="section log-in" id="login" style="display: none;">
+    <h2 class="section-title">Log In</h2>
+    <form class="login-form" id="loginForm">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+
+        <button type="submit" class="login-submit">Iniciar Sesión</button>
+        <button type="button" class="registro-toggle" onclick="toggleRegistro()">Regístrate</button>
+        <p id="loginMessage" class="login-message"></p>
+    </form>
+    <!-- Botón para volver a la página principal -->
+    <button type="button" class="pagina-principal" onclick="recargarPagina()">Página Principal</button>
+</section>
+
+<!-- Sección de Registro (inicialmente oculta y centrada en la pantalla) -->
+<section class="section registro" id="registro" style="display: none;">
+    <h2 class="section-title">Registro</h2>
+    <form class="registro-form" id="registroForm">
+        <label for="newUsername">Nuevo Usuario:</label>
+        <input type="text" id="newUsername" name="newUsername" placeholder="Crea tu usuario" required>
+
+        <label for="newPassword">Nueva Contraseña:</label>
+        <input type="password" id="newPassword" name="newPassword" placeholder="Crea tu contraseña" required>
+
+        <button type="submit" class="registro-submit">Registrar</button>
+        <p id="registroMessage" class="registro-message"></p>
+    </form>
+    <!-- Botón para volver a la página principal -->
+    <button type="button" class="pagina-principal" onclick="recargarPagina()">Página Principal</button>
+</section>
+
+<!-- Página de Mis Partituras -->
+<section class="section mis-partituras" id="mis-partituras" style="display: none;">
+    <div class="perfil-container">
+        <button class="mi-perfil" onclick="irAMiPerfil()">Mi Perfil</button>
+        <button class="mis-clases" onclick="irAMisClases()">Mis Clases</button> <!-- Nuevo botón -->
+    </div>
+    <h1 class="title">Mis Partituras</h1>
+    <p>Aquí podrás ver todas tus partituras.</p>
+
+    <div class="partituras-container">
+        <img src="images/partitura1.jpeg" alt="Partitura 1" class="partitura" onclick="mostrarPartitura('images/partitura1.jpeg')">
+        <img src="images/partitura2.jpeg" alt="Partitura 2" class="partitura" onclick="mostrarPartitura('images/partitura2.jpeg')">
+        <img src="images/partitura3.jpeg" alt="Partitura 3" class="partitura" onclick="mostrarPartitura('images/partitura3.jpeg')">
+    </div>
+
+    <!-- Modal para mostrar la partitura ampliada -->
+    <div id="modal" class="modal" style="display: none;" onclick="cerrarModal()">
+        <span class="cerrar">&times;</span>
+        <img id="partitura-ampliada" src="" alt="Partitura Ampliada">
+    </div>
+</section>
+
+<!-- Enlace al archivo JavaScript -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
+
+
+
